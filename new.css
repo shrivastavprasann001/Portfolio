@@ -393,9 +393,7 @@ nav .fa-solid {
 
 /* ---------------MEDIA QUERIES--------- */
 @media (max-width:780px) {
-    * {
-        background-color: black;
-    }
+    
 #curser{
     display:none
 }
