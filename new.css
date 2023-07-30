@@ -396,7 +396,9 @@ nav .fa-solid {
     * {
         background-color: black;
     }
-
+#curser{
+    display:none
+}
     #header .photo img {
         display: none;
     }
