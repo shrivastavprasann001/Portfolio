@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS</title>
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="curser"></div>
+    <div id="header">
+        <div class="photo"> <img src="images/p1.png"></div>
+        <div class="photophone"> </div>
+        <div class="container">
+            <nav>
+                <img class="logo" src="images/logo (2).png" alt="logo">
+                <ul class="navtag">
+                    <li><a href="#header" class="nav"> Home</a></li>
+                    <li><a href="#about" class="nav"> About</a></li>
+                    <li><a href="#project" class="nav"> Projects</a></li>
+                    <li><a href="#contact" class="nav"> Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="intro">
+                <h2>Front-end Developer</h2>
+                <h1>Hi, I am <span>Prasann</span> Shrivastav</h2>
+            </div>
+        </div>
+    </div>
+    <!-- --------------ABOUT------------  -->
+    <div id="about">
+        <div class="row">
+            <div class="about_col_1">
+                <div class="imagee"><img src="images/p7.png" alt="images"></div>
+            </div>
+            <div class="about_col_2">
+                <h1>About Me</h1>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp;A front-end developer passionate about creating engaging and user-friendly
+                    websites. With a strong
+                    foundation in HTML, CSS, and JavaScript, I strive to deliver high-quality development projects that
+                    exceed client expectations. Additionally, I'm a beginner in Java and Python, constantly expanding my
+                    skills and exploring new technologies.
+                    <br>
+                    I'm the founder of a startup called YOURSHED, where we focused on Accommodation problems for college
+                    students. Although the venture has closed, the experience has given me valuable insights into
+                    product development, implementation, and the importance of timely execution.
+                    <br>
+                    Beyond my technical expertise, I also have a passion for education. I run my own institution
+                    (Eklavya Coaching classes) where I teach students from class 4th to 10th, providing them with a
+                    solid foundation in various subjects.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab_links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab_links" onclick="opentab('education')">Education</p>
+                    <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-content active-tab" id="skills">
+                    <ul>
+                        <li><span>Front-end Developer</span><br> make web layout</li>
+                        <li><span>Java developer</span><br> Java developer</li>
+                        <li><span>Python developer</span><br>Python developer</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="education">
+                    <ul>
+                        <li><span>B.tech</span><br>MITS , CGPA-8.14</li>
+                        <li><span>Higher Secondary</span><br> SSMB, 88%</li>
+                        <li><span>High School</span><br>SSMB, 90.3%</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="experience">
+                    <ul>
+                        <li><span>YOURSHED</span><br> Provide rooms</li>
+                        <li><span>Coaching</span><br> Eklavya coaching classes</li>
+                        <li><span>Graphic designer</span><br>Science club graphic designer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------MY WORK------------------------>
+    <div class="project" id="project">
+        <div class="container">
+            <h1 class="sub_title">My Work</h1>
+            <div class="worklist">
+                <div class="work">
+                    <img src="images/work_1.jpg" alt="work_1">
+                    <div class="layer">
+                        <h3>Crib Home page</h3>
+                        <p> Startup website crib clone</p>
+                        <a> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work_2.jpg" alt="work_2">
+                    <div class="layer">
+                        <h3>Portfolio website </h3>
+                        <p> personal Portfolio website</p>
+                        <a><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------CONTACT---------- -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="contact_row">
+                <div class="contact-left">
+                    <h1> Contact Me</h1>
+                    <h2><a title="email" href="mailto:shrivastava.prasann18@gmail.com?"><i
+                                class="fa-solid fa-paper-plane"></i></a>&nbsp; &nbsp; Shrivastava.prasann18@gmail.com
+                    </h2>
+                    <h2><i class="fa-solid fa-phone-volume"></i> &nbsp; +91-9009736496</h2>
+                    <button> <a download href="images/updated resume   .pdf.pdf">Download Resume</a> </button>
+                </div>
+                <div class="contact-right">
+
+                    <form name="submit-to-google-sheet">
+                        <input name="name" type="text" placeholder="Your Name" required>
+                        <input name="email" type="text" placeholder="Your email" required>
+                        <input name="contact" type="text" placeholder="Your contact Number">
+                        <textarea name="Message" rows="6" placeholder=" Your Message"></textarea>
+                        <button class="btn" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------social media links-------- -->
+
+    <div class="social_link" id="social_link">
+        <a href=""><img src="images/fb.png"> </a>
+        <a href=""><img src="images/insta_logo-removebg-preview.png"> </a>
+        <a href=""><img src="images/linkedin-icon-2048x2048-ya5g47j2.png"> </a>
+        <a href=""><img src="images/git-removebg-preview.png"> </a>
+        <a href=""><img src="images/twitter-removebg-preview.png"> </a>
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+    <script src="new.js"> </script> -->
+
+</body>
+
+</html>
