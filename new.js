@@ -1,34 +1,24 @@
-var crsr = document.querySelector("#curser")
-const navIcon = document.querySelectorAll("nav");
-document.addEventListener("mousemove", function (e) {
-    crsr.style.left = e.x + "px"
-    crsr.style.top = e.y + "px"
-
-    // })
-    // navIcon.addEventListener('mouseenter', () => {
-    //     crsr.style.width = '3.5rem';
-    //     crsr.style.height = '3.5rem';
-    //     crsr.style.border = '1.5rem';
-    // });
-
-    // navIcon.addEventListener('mouseleave', () => {
-    //     crsr.style.width = '1.5rem';
-    //     crsr.style.height = '1.5rem';
-    // });
-
-    // // gsap for about section
-    // gsap.to("#about", {
-    //     backgroundColor: "#000",
-    //     scrollTrigger: {
-    //         trigger: "#about",
-    //         scrub: 2,
-    //         scroller: "body",
-    //         // markers: true,
-    //         start: "top -40%",
-    //         end: "top -80%"
-
-    //     }
+// var crsr = document.querySelector("#curser")
+// const navIcon = document.querySelectorAll("nav");
+// document.addEventListener("mousemove", function (e) {
+//     crsr.style.left = e.x + "px"
+//     crsr.style.top = e.y + "px"
+// })
+gsap.to(
+    "#navbar", {
+    duration: 1,
+    opacity: ".5",
+    height: "6rem",
+    scrollTrigger: {
+        trigger: "#navbar",
+        scroller: "body",
+        // markers: true,
+        start: "top -10%",
+        end: "top -11%",
+        scrub: 1
+    }
 })
+
 var tablinks = document.getElementsByClassName("tab_links");
 var tabcontents = document.getElementsByClassName("tab-content");
 function opentab(tabname) {
@@ -46,16 +36,58 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
+// -----------------Project -> .card height increase---------------
+const childElement = document.querySelector('.card_upper');
+const parentElement = document.querySelector('.card');
+const childElement1 = document.querySelector('.card_2_upper');
+const parentElement2 = document.querySelector('.card_2');
+
+childElement.addEventListener('mouseover', () => {
+    parentElement.style.height = '20rem';
+
+
+})
+
+childElement.addEventListener('mouseout', () => {
+    parentElement.style.height = '4rem';
+})
+
+
+childElement1.addEventListener('mouseover', () => {
+    parentElement2.style.height = '20rem';
+
+})
+
+childElement1.addEventListener('mouseout', () => {
+    parentElement2.style.height = '4rem';
+})
+
+
+
 // MOBILE RESPONSIVE MENU 
+const bodytag = document.querySelector('.hide');
 var submenu = document.querySelector(".navtag");
+const menu = document.querySelectorAll('.navtag');
+
 function openmenu() {
     submenu.style.right = "0px";
+    bodytag.style.opacity = .5;
 }
 function closemenu() {
-    submenu.style.right = "-200px";
+    submenu.style.right = "-100%";
+    bodytag.style.opacity = 1;
 }
+function hidemenu() {
+    submenu.style.right = "-100%";
+    bodytag.style.opacity = 1;
+
+}
+// -------when click on any sidemenu it will automatically hide----------
 
 
+
+
+// ------------Google Sheet ---------------
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzBmHMe6P6JXVn7nUppq0BUvxh7XBo6swIRsM0yvJK3Gc7-7y94L9tJYb1TiyKNVpGx/exec'
 const form = document.forms['submit-to-google-sheet']
 
@@ -65,3 +97,19 @@ form.addEventListener('submit', e => {
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
 })
+
+// -----------Scrolling Animation -----------------
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    })
+});
+const showhiddenelement = document.querySelectorAll('.hidden');
+showhiddenelement.forEach((el) => observer.observe(el));
+
+// ---------------sidemenu open and close (CHATGPT)------------
