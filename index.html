@@ -10,36 +10,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="media_querry.css">
 </head>
 
 <body>
-    <div id="curser"></div>
-    <div id="header">
-        <div class="photo"> <img src="images/p1.png"></div>
-        <div class="photophone"> </div>
+    <!-- <div id="curser"></div> -->
+    <!-- ---------------NAVBAR-------------- -->
+    <div id="navbar">
+        <img class="logo" src="images/logo (2).png" alt="logo">
+        <ul class="navtag">
+            <li><a href="#" onclick="hidemenu()"> Home</a></li>
+            <li><a href="#about" onclick="hidemenu()"> About</a></li>
+            <li><a href="#project" onclick="hidemenu()"> Projects</a></li>
+            <li><a href="#contact" onclick="hidemenu()"> Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" id="#sidebar-button" onclick="openmenu()"></i>
+    </div>
+    <!-- -------------Header----------------->
+    <div id="header" class="hidden hide">
+        <!-- <video autoplay loop muted src="images/bg video.mp4"></video> -->
         <div class="container">
-            <nav>
-                <img class="logo" src="images/logo (2).png" alt="logo">
-                <ul class="navtag">
-                    <li><a href="#header" class="nav"> Home</a></li>
-                    <li><a href="#about" class="nav"> About</a></li>
-                    <li><a href="#project" class="nav"> Projects</a></li>
-                    <li><a href="#contact" class="nav"> Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
             <div class="intro">
-                <h2>Front-end Developer</h2>
-                <h1>Hi, I am <span>Prasann</span> Shrivastav</h2>
+                <div class="laptop_h1">
+                    <h1>Hi, <br>I'm<span> P</span>&nbsp; &nbsp;rasann <br>Front-end Developer</h1>
+                    <button class="intro_button">
+                        <a href="#contact">Contact us</a></button>
+                </div>
+                <div class="mobile_h1">
+                    <h2>Hey, I'm </h2>
+                    <h1>Prasann Shrivastav</h1>
+                    <h3>Front-end developer / Python / Java </h3>
+                </div>
+                <div class="photo"> </div>
             </div>
         </div>
     </div>
     <!-- --------------ABOUT------------  -->
-    <div id="about">
+    <div id="about" class="hidden">
         <div class="row">
             <div class="about_col_1">
-                <div class="imagee"><img src="images/p7.png" alt="images"></div>
+                <div class="imagee"></div>
             </div>
             <div class="about_col_2">
                 <h1>About Me</h1>
@@ -57,73 +68,138 @@
                     (Eklavya Coaching classes) where I teach students from class 4th to 10th, providing them with a
                     solid foundation in various subjects.
                 </p>
-                <div class="tab-titles">
-                    <p class="tab_links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab_links" onclick="opentab('education')">Education</p>
-                    <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                <div class="about_col_2_lower">
+                    <!-- ------------skill card-------- -->
+                    <div class="card">
+                        <div class="card_upper">
+                            <img src="images/skill_svg.png">
+                            <p>Skills</p>
+                        </div>
+                        <div class="card_lower">
+                            <div class="contents"> <img src="images/html_svg.svg">
+                                <p>Html
+                                <p>
+                            </div>
+                            <div class="contents"> <img src="images/css_svg.svg">
+                                <p> Css</p>
+                            </div>
+                            <div class="contents"> <img src="images/js_svg.svg">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="contents"> <img src="images/react_svg.svg">
+                                <p>React js</p>
+                            </div>
+                            <div class="contents"> <img src="images/python_svg.svg">
+                                <p>Python </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ---------------------EDUCATION CARD ----------------- -->
+                    <div class="card card_2">
+                        <div class="card_upper card_2_upper">
+                            <img src="images/ed_svg.png">
+                            <p>Education</p>
+                        </div>
+                        <div class="card_lower">
+                            <div class="content"> <img src="images/college_boy-removebg-preview.png">
+                                <p class="card_lower_lower_p">B.tech in ECE,CGPA-8.13, MITS
+                                <p>
+                            </div>
+                            <div class="content"><img src="images/12th_boy-removebg-preview.png">
+                                <p class="card_lower_lower_p"> Higher Secondary ,88%</p>
+                            </div>
+                            <div class="content"><img src="images/10th_boy-removebg-preview.png">
+                                <p class="card_lower_lower_p">High School, 91%</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="tab-content active-tab" id="skills">
-                    <ul>
-                        <li><span>Front-end Developer</span><br> make web layout</li>
-                        <li><span>Java developer</span><br> Java developer</li>
-                        <li><span>Python developer</span><br>Python developer</li>
-                    </ul>
-                </div>
-                <div class="tab-content" id="education">
-                    <ul>
-                        <li><span>B.tech</span><br>MITS , CGPA-8.14</li>
-                        <li><span>Higher Secondary</span><br> SSMB, 88%</li>
-                        <li><span>High School</span><br>SSMB, 90.3%</li>
-                    </ul>
-                </div>
-                <div class="tab-content" id="experience">
-                    <ul>
-                        <li><span>YOURSHED</span><br> Provide rooms</li>
-                        <li><span>Coaching</span><br> Eklavya coaching classes</li>
-                        <li><span>Graphic designer</span><br>Science club graphic designer</li>
-                    </ul>
+                <div id="about_col_2_lower_part2">
+                    <div class="tab-titles">
+                        <p class="tab_links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab_links" onclick="opentab('education')">Education</p>
+                        <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end Developer</span><br> make web layout</li>
+                            <li><span>Java developer</span><br> Java developer</li>
+                            <li><span>Python developer</span><br>Python developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>B.tech</span><br>MITS , CGPA-8.14</li>
+                            <li><span>Higher Secondary</span><br> SSMB, 88%</li>
+                            <li><span>High School</span><br>SSMB, 90.3%</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>YOURSHED</span><br> Provide rooms</li>
+                            <li><span>Coaching</span><br> Eklavya coaching classes</li>
+                            <li><span>Graphic designer</span><br>Science club graphic designer</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!---------------------------MY WORK------------------------>
-    <div class="project" id="project">
+    <div class="project hidden" id="project">
         <div class="container">
             <h1 class="sub_title">My Work</h1>
             <div class="worklist">
+                <!-- ----=-------project_1--------- -->
                 <div class="work">
-                    <img src="images/work_1.jpg" alt="work_1">
+                    <!-- <img src="images/work_1.jpg" alt="work_1"> -->
                     <div class="layer">
+                        <img src="images/crib.svg">
                         <h3>Crib Home page</h3>
                         <p> Startup website crib clone</p>
-                        <a target="_blank" href="https://shrivastavprasann001.github.io/crib/"> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a target="_blank" href="https://shrivastavprasann001.github.io/crib/"> <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
+                <!-- ----=-------project_2--------- -->
                 <div class="work">
-                    <img src="images/work_2.jpg" alt="work_2">
+                    <!-- <img src="images/work_2.jpg" alt="work_2"> -->
                     <div class="layer">
+                        <img src="images/portfolio.png">
                         <h3>Portfolio website </h3>
                         <p> personal Portfolio website</p>
-                        <a target="_blank" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a target="_blank" href="https://shrivastavprasann001.github.io/Portfolio/"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- ----=-------project_3--------- -->
+                <div class="work">
+                    <!-- <img src="images/work_2.jpg" alt="work_2"> -->
+                    <div class="layer layer_3">
+                        <img src="images/amazon.png">
+                        <h3>Amazon clone </h3>
+                        <p> Amazon Home page clone</p>
+                        <a><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- ---------CONTACT---------- -->
-    <div class="contact" id="contact">
+    <div class="contact hidden" id="contact">
         <div class="container">
             <div class="contact_row">
                 <div class="contact-left">
                     <h1> Contact Me</h1>
-                    <h2><a title="email" href="mailto:shrivastava.prasann18@gmail.com?"><i
-                                class="fa-solid fa-paper-plane"></i></a>&nbsp; &nbsp; Shrivastava.prasann18@gmail.com
+                    <h2><a title="email" href="mailto:shrivastava.prasann18@gmail.com?">
+                            <i class="fa-solid fa-paper-plane" ></i></a>&nbsp; &nbsp; Shrivastava.prasann18@gmail.com
                     </h2>
                     <h2><i class="fa-solid fa-phone-volume"></i> &nbsp; +91-9009736496</h2>
                     <button> <a download href="images/updated resume   .pdf.pdf">Download Resume</a> </button>
                 </div>
                 <div class="contact-right">
-
+                    <hr>
+                    <h2>Get in touch </h2>
                     <form name="submit-to-google-sheet">
                         <input name="name" type="text" placeholder="Your Name" required>
                         <input name="email" type="text" placeholder="Your email" required>
@@ -137,12 +213,16 @@
     </div>
     <!-- -----------social media links-------- -->
 
-    <div class="social_link" id="social_link">
-        <a href=""><img src="images/fb.png"> </a>
-        <a href=""><img src="images/insta_logo-removebg-preview.png"> </a>
-        <a href=""><img src="images/linkedin-icon-2048x2048-ya5g47j2.png"> </a>
-        <a href=""><img src="images/git-removebg-preview.png"> </a>
-        <a href=""><img src="images/twitter-removebg-preview.png"> </a>
+    <div class="social_link hidden" id="social_link">
+        <a target="_blank" href="https://www.facebook.com/prasann.shrivastava.7?mibextid=ZbWKwL"><img
+                src="images/fb.png"> </a>
+        <a target="_blank" href="https://instagram.com/_r.i.s.h.a.b.__?igshid=MzNlNGNkZWQ4Mg=="><img
+                src="images/insta_logo-removebg-preview.png"> </a>
+        <a target="_blank" href="https://www.linkedin.com/in/prasann-shrivastava"><img
+                src="images/linkedin-icon-2048x2048-ya5g47j2.png"> </a>
+        <a target="_blank" href="https://github.com/shrivastavprasann001"><img src="images/git-removebg-preview.png">
+        </a>
+        <a target="_blank" href="https://t.me/Prasungood001"><img src="images/telegram.png"> </a>
 
     </div>
 
