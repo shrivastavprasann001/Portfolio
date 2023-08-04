@@ -1,9 +1,3 @@
-// var crsr = document.querySelector("#curser")
-// const navIcon = document.querySelectorAll("nav");
-// document.addEventListener("mousemove", function (e) {
-//     crsr.style.left = e.x + "px"
-//     crsr.style.top = e.y + "px"
-// })
 gsap.to(
     "#navbar", {
     duration: 1,
@@ -44,8 +38,6 @@ const parentElement2 = document.querySelector('.card_2');
 
 childElement.addEventListener('mouseover', () => {
     parentElement.style.height = '20rem';
-
-
 })
 
 childElement.addEventListener('mouseout', () => {
@@ -65,24 +57,18 @@ childElement1.addEventListener('mouseout', () => {
 
 
 // MOBILE RESPONSIVE MENU 
-const bodytag = document.querySelector('.hide');
+const menu = document.getElementById('sidebar-button');
+const insidemenu = document.querySelectorAll('#navbar .navtag li a');
 var submenu = document.querySelector(".navtag");
-const menu = document.querySelectorAll('.navtag');
+// const menu = document.querySelectorAll('.navtag');
 
-function openmenu() {
-    submenu.style.right = "0px";
-    bodytag.style.opacity = .5;
-}
-function closemenu() {
-    submenu.style.right = "-100%";
-    bodytag.style.opacity = 1;
-}
-function hidemenu() {
-    submenu.style.right = "-100%";
-    bodytag.style.opacity = 1;
+menu.onclick = () => {
+    submenu.classList.toggle("open");
 
 }
-// -------when click on any sidemenu it will automatically hide----------
+insidemenu.onclick = () => {
+    submenu.classList.remove("open");
+}
 
 
 
@@ -112,4 +98,3 @@ const observer = new IntersectionObserver((entries) => {
 const showhiddenelement = document.querySelectorAll('.hidden');
 showhiddenelement.forEach((el) => observer.observe(el));
 
-// ---------------sidemenu open and close (CHATGPT)------------

@@ -8,29 +8,12 @@
 
 html {
     scroll-behavior: smooth;
-    width: 100vw;
 }
-
-/* 
-body {
-   
- background-color: #151D26; 
-} */
-
-/* #curser {
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: red;
-    border-radius: 50%;
-    position: fixed;
-    z-index: 99;
-    transition: transform 0.5s ease-out, width 0.4s ease-out, height 0.4s ease-out, opacity 0.5s ease-out;
-} */
 
 #navbar {
     width: 100vw;
     height: 5rem;
-    padding: 0 3rem;
+    padding: 0 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,8 +22,6 @@ body {
 
 #navbar ul {
     font-size: 1.2rem;
-    /* height: 100vw; */
-    margin-right: 5%;
     text-decoration: none;
     gap: 2rem;
     list-style: none;
@@ -171,7 +152,6 @@ body {
 
 .about_col_2 {
     background-color: rgba(255, 255, 255, 0.879);
-
     flex-basis: 70%;
     padding-right: 5rem;
     display: flex;
@@ -180,7 +160,6 @@ body {
 
 .about_col_2 h1 {
     background-color: rgba(255, 255, 255, 0.879);
-
     margin-bottom: 2rem;
     font-size: 3rem;
     color: #1A2238;
